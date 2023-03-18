@@ -1,13 +1,12 @@
 with
     source_order_details as (
         select
-            cast(order_id as int) as id_pedido 
-            , cast(product_id as int) as id_produto
-            , cast(discount as numeric) as desconto
-            , cast(unit_price as numeric) as preco_da_unidade
-            , cast(quantity as int) as quantidade
+            cast(order_id as int) as order_details_order_id
+            , cast(product_id as int) as order_details_product_id
+            , cast(discount as numeric) as order_details_discount
+            , cast(unit_price as numeric) as order_details_unit_price
+            , cast(quantity as int) as order_details_quantity
         from {{ source('erp', 'order_details') }}
     )
-
 select *
 from source_order_details

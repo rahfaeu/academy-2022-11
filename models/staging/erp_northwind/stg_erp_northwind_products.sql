@@ -1,21 +1,20 @@
 with
     source_products as (
         select
-            cast(product_id	as int) as id_produto
-            , cast(supplier_id as int) as id_fornecedor	
-            , cast(category_id as int) as id_categoria	
-            , cast(product_name as string) as nome_produto			
-            , cast(quantity_per_unit as string)	as quantidade_por_unidade		
-            , cast(unit_price as numeric) as preco_por_unidade
-            , cast(units_in_stock as int) as unidades_em_estoque		
-            , cast(units_on_order as int) as unidades_por_ordem			
-            , cast(reorder_level as int) as	nivel_reabastecimento		
+            cast(product_id	as int) as products_product_id
+            , cast(supplier_id as int) as products_supplier_id
+            , cast(category_id as int) as products_category_id
+            , cast(product_name as string) as products_product_name
+            , cast(quantity_per_unit as string)	as products_quantity_per_unit
+            , cast(unit_price as numeric) as products_unit_price
+            , cast(units_in_stock as int) as products_units_in_stock
+            , cast(units_on_order as int) as products_units_on_order
+            , cast(reorder_level as int) as	products_reorder_level
             , case
                 when discontinued = 1 then true
                 else false
-            end as is_discontinuado
+            end as products_is_discontinued
         from {{ source('erp', 'products') }}
     )
-
 select *
 from source_products

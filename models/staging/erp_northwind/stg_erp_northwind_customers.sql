@@ -1,17 +1,17 @@
 with
     source_customers as (
         select
-            cast(customer_id as string) id_cliente
-            , cast(contact_name as string) as nome_do_cliente
-            , cast(contact_title as string) as titulo_de_cortesia
-            , cast(company_name as string) as nome_da_empresa
-            , cast('address' as string) as endereco
-            , cast(postal_code as string) as cep
-            , cast(city as string) as cidade
-            , cast(region as string) as regiao
-            , cast(country as string) as pais
-            , cast(fax as string) as fax
-            , cast(phone as string) as telefone
+            cast(customer_id as string) customers_customer_id
+            , cast(contact_name as string) as customers_contact_name
+            , cast(contact_title as string) as customers_contact_title
+            , cast(company_name as string) as customers_company_name
+            , cast('address' as string) as customers_address
+            , cast(postal_code as string) as customers_postal_code
+            , cast(city as string) as customers_city
+            , cast(region as string) as customers_region
+            , cast(country as string) as customers_country
+            , cast(fax as string) as customers_fax
+            , cast(phone as string) as customers_phone
         from {{ source('erp', 'customers') }}
     )
 select *
