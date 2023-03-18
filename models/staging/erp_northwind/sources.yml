@@ -30,3 +30,6 @@ sources:
             count: 36
             period: hour
         loaded_at_field: el_loaded_raw
+
+      - name: suppliers
+        description: Fornecedores dos produtos comercializados pela Northwind.
