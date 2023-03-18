@@ -33,3 +33,6 @@ sources:
 
       - name: suppliers
         description: Fornecedores dos produtos comercializados pela Northwind.
+
+      - name: employees
+        description: Tabela com informações dos funcionários da Northwind e seus gerentes.
