@@ -13,3 +13,6 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: order_details
+        description: Detalhe de item linha para cada pedido da tabela ordens.
