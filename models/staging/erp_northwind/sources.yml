@@ -16,3 +16,6 @@ sources:
 
       - name: order_details
         description: Detalhe de item linha para cada pedido da tabela ordens.
+
+      - name: products
+        description: Tabela com os produtos comercializados pela Northwind.
