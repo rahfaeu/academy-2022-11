@@ -36,3 +36,6 @@ sources:
 
       - name: employees
         description: Tabela com informações dos funcionários da Northwind e seus gerentes.
+
+      - name: shippers
+        description: Transportadoras utilizadas na realização das entregas dos pedidos fechados.
