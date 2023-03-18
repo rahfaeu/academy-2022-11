@@ -39,3 +39,6 @@ sources:
 
       - name: shippers
         description: Transportadoras utilizadas na realização das entregas dos pedidos fechados.
+
+      - name: customers
+        description: Tabela com informações dos clientes da Northwind.
